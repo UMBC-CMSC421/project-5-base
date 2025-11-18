@@ -6,3 +6,6 @@ build_img: generate-simplefs.c
 
 run_parser: parser
 	./parser
+
+driver: simplefs_main.c
+	gcc -g -Wall -Wextra -pedantic -Werror -std=gnu11 simplefs_main.c `pkg-config fuse3 --libs --cflags` -o simplefs_main
