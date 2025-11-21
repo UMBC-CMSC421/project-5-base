@@ -31,5 +31,5 @@ int main(int argc, char* argv[]) {
 
   // FUSE doesnt care about the filesystem image.
   // hence, knowing that the first argument isnt valid we skip over it.
-  return fuse_main(argc--, argv++, &simfs_operations, NULL);
+  return fuse_main(--argc, ++argv, &simfs_operations, NULL);
 }
