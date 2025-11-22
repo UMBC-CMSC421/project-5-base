@@ -26,7 +26,7 @@ int main() {
   ssize_t r = read(fd, &bytes, totals);
   if (r != totals) {
     printf("ERROR: parser failed to read all bytes.\n");
-    printf("INFO: is your file 271144 bytes in size?\n");
+    printf("INFO: is your file %d bytes in size?\n", totals);
     return 1;
   }
 
